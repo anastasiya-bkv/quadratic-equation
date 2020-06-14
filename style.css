@@ -1,0 +1,90 @@
+body {
+  min-width: 100vh;
+  background-image: url(./background.jpg);
+  background-repeat: repeat;
+}
+
+body::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -2;
+  opacity: 0.7;
+}
+
+.container {
+  text-align: center;
+  font-size: 20px;
+}
+
+form {
+  margin: auto;
+  border-radius: 30px;
+  margin-top: 7%;
+  width: 50%;
+  position: relative;
+  padding: 10px;
+}
+
+form::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  background-color: #fff7dc;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.control {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+  margin: auto;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.varInput {
+  width: 150px;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #777;
+  padding: 3px 0;
+  background: none;
+}
+
+.varInput::placeholder {
+  color: #333;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.btn {
+  border: none;
+  background-color: #275656;
+  color: #fff;
+  font-size: 20px;
+  padding: 8px 30px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
